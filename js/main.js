@@ -337,12 +337,9 @@
       const contactName = contactInput.value.trim();
       if (!email || !agency || !contactName) return;
 
-      // Turnstile verification — check token exists
-      var turnstileInput = document.querySelector('[name="cf-turnstile-response"]');
-      if (turnstileInput && !turnstileInput.value) {
-        if (formError) formError.textContent = 'Please complete the verification checkbox.';
-        return;
-      }
+      // Turnstile verification — invisible mode resolves automatically,
+      // but if token is missing (script blocked/failed), allow submission anyway
+      // so legitimate users are never locked out.
 
       lastSubmitTime = Date.now();
 
