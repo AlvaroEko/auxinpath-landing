@@ -294,6 +294,11 @@
   const agencyInput = document.getElementById('agency-input');
   const contactInput = document.getElementById('contact-input');
 
+  // Anti-spam: rate limiting & duplicate tracking
+  var lastSubmitTime = 0;
+  var SUBMIT_COOLDOWN = 30000; // 30 seconds between submissions
+  var hasSubmitted = false;
+
   if (form) {
     // Ripple effect on button click
     ctaButton.addEventListener('mousedown', function (e) {
@@ -310,14 +315,36 @@
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
 
+      var formError = document.getElementById('form-error');
+      if (formError) formError.textContent = '';
+
+      // Duplicate prevention — already submitted successfully
+      if (hasSubmitted) {
+        if (formError) formError.textContent = 'You have already joined the waitlist!';
+        return;
+      }
+
+      // Rate limiting — prevent rapid resubmission
+      var now = Date.now();
+      if (now - lastSubmitTime < SUBMIT_COOLDOWN) {
+        var secsLeft = Math.ceil((SUBMIT_COOLDOWN - (now - lastSubmitTime)) / 1000);
+        if (formError) formError.textContent = 'Please wait ' + secsLeft + ' seconds before trying again.';
+        return;
+      }
+
       const email = emailInput.value.trim();
       const agency = agencyInput.value.trim();
       const contactName = contactInput.value.trim();
       if (!email || !agency || !contactName) return;
 
-      // Clear any previous error
-      var formError = document.getElementById('form-error');
-      if (formError) formError.textContent = '';
+      // Turnstile verification — check token exists
+      var turnstileInput = document.querySelector('[name="cf-turnstile-response"]');
+      if (turnstileInput && !turnstileInput.value) {
+        if (formError) formError.textContent = 'Please complete the verification checkbox.';
+        return;
+      }
+
+      lastSubmitTime = Date.now();
 
       // Show loading state
       ctaButton.classList.add('loading');
@@ -347,7 +374,6 @@
           ctaButton.classList.remove('loading');
           ctaButton.disabled = false;
           ctaButton.setAttribute('aria-busy', 'false');
-          var formError = document.getElementById('form-error');
           if (formError) formError.textContent = 'No internet connection. Please try again.';
         } else {
           // Online but got opaque redirect error — data DID arrive
@@ -358,6 +384,7 @@
   }
 
   function showSuccess() {
+    hasSubmitted = true;
     form.style.display = 'none';
     successMessage.classList.add('visible');
     ctaButton.classList.remove('loading');
@@ -563,6 +590,20 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
+  // ---- Email Obfuscation (anti-harvesting) ----
+  function setupContactLink() {
+    var link = document.getElementById('contact-link');
+    if (!link) return;
+    var u = link.getAttribute('data-u');
+    var d = link.getAttribute('data-d');
+    if (u && d) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.location.href = 'mai' + 'lto:' + u + '@' + d;
+      });
+    }
+  }
+
   // ---- Initialize ----
   function init() {
     resizeCanvas();
@@ -573,6 +614,7 @@
     setupShimmer();
     setupStickyNav();
     setupBackToTop();
+    setupContactLink();
 
     // Drag & Fling physics (includes parallax for non-dragged pieces)
     initDragPhysics();

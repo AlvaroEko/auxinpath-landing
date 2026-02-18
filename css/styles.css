@@ -790,6 +790,13 @@ body {
   gap: 18px;
 }
 
+/* Cloudflare Turnstile widget */
+.cf-turnstile {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
+}
+
 /* Floating Label Groups */
 .form-group {
   position: relative;

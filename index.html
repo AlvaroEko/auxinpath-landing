@@ -15,7 +15,7 @@
 
   <!-- Content Security Policy -->
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'self' https://script.google.com; font-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://script.google.com;">
+    content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'self' https://script.google.com; font-src 'none'; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self' https://script.google.com;">
 
   <!-- Open Graph -->
   <meta property="og:title" content="AuxinPath - ABA Clinic Management Software for BCBA &amp; RBT Teams">
@@ -50,6 +50,9 @@
 
   <link rel="stylesheet" href="css/styles.css">
 
+  <!-- Cloudflare Turnstile (bot protection) -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
   <!-- Structured Data: Organization -->
   <script type="application/ld+json">
   {
@@ -59,7 +62,6 @@
     "url": "https://auxinpath.com",
     "logo": "https://auxinpath.com/assets/logo.svg",
     "description": "AuxinPath is an all-in-one ABA clinic management platform built for BCBA and RBT teams. Streamline scheduling, clinical documentation, data collection, billing, and parent engagement.",
-    "email": "hello@auxinpath.com",
     "sameAs": []
   }
   </script>
@@ -500,6 +502,9 @@
               <div class="form-highlight"></div>
             </div>
 
+            <!-- Cloudflare Turnstile widget — replace YOUR_SITE_KEY with your real key -->
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAACe9P5cZMpYvQQtu" data-theme="dark" data-size="normal" data-language="en"></div>
+
             <button type="submit" class="cta-button" id="cta-button">
               <span class="btn-text">Join the Waitlist</span>
               <span class="btn-loader" aria-hidden="true">
@@ -546,7 +551,7 @@
         <a href="#features" class="footer-link">Features</a>
         <a href="#faq" class="footer-link">FAQ</a>
         <a href="#waitlist" class="footer-link">Waitlist</a>
-        <a href="mailto:hello@auxinpath.com" class="footer-link">Contact</a>
+        <a href="#" class="footer-link" id="contact-link" data-u="hello" data-d="auxinpath.com">Contact</a>
       </nav>
       <p class="footer-copyright">&copy; 2026 AuxinPath. All rights reserved.</p>
     </div>
