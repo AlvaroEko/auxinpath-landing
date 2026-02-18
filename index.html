@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuxinPath - ABA Clinic Management Software for BCBA &amp; RBT Teams</title>
+  <meta name="description"
+    content="AuxinPath is an all-in-one ABA clinic management platform built for BCBA and RBT teams. Smart scheduling with conflict detection, clinical documentation with session notes and treatment plans, data collection with real-time graphing, caregiver portal, HIPAA-compliant audit trails, and Medicaid authorization support. Join the waitlist for early access.">
+  <meta name="keywords"
+    content="ABA software, ABA clinic management, Applied Behavior Analysis, ABA practice management, BCBA software, RBT software, ABA scheduling, ABA session notes, treatment plan software, ABA data collection, ABA billing, autism therapy software, behavior analysis, ABA therapy platform, HIPAA compliant ABA, Medicaid ABA, VB-MAPP, FBA, behavior intervention plan, caregiver portal, ABA EHR">
+  <meta name="author" content="AuxinPath">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://auxinpath.com/">
+
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'self' https://script.google.com; font-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://script.google.com;">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AuxinPath - ABA Clinic Management Software for BCBA &amp; RBT Teams">
+  <meta property="og:description"
+    content="All-in-one ABA practice management: smart scheduling, clinical documentation, data collection, caregiver portal, and HIPAA compliance. Built for BCBA and RBT teams. Join the waitlist.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://auxinpath.com/">
+  <meta property="og:image" content="https://auxinpath.com/assets/og-image.png">
+  <meta property="og:site_name" content="AuxinPath">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AuxinPath - ABA Clinic Management Software">
+  <meta name="twitter:description"
+    content="All-in-one ABA practice management: scheduling, clinical docs, data collection, caregiver portal, HIPAA compliance. Built for BCBA &amp; RBT teams.">
+  <meta name="twitter:image" content="https://auxinpath.com/assets/og-image.png">
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#0D7377">
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- No-JS fallback: make scroll-reveal content visible -->
+  <noscript><style>.scroll-reveal{opacity:1!important;transform:none!important}</style></noscript>
+
+  <!-- Preload -->
+  <link rel="preload" href="css/styles.css" as="style">
+  <link rel="preload" href="js/main.js" as="script">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AuxinPath",
+    "url": "https://auxinpath.com",
+    "logo": "https://auxinpath.com/assets/logo.svg",
+    "description": "AuxinPath is an all-in-one ABA clinic management platform built for BCBA and RBT teams. Streamline scheduling, clinical documentation, data collection, billing, and parent engagement.",
+    "email": "hello@auxinpath.com",
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Structured Data: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AuxinPath",
+    "applicationCategory": "HealthApplication",
+    "applicationSubCategory": "ABA Clinic Management",
+    "operatingSystem": "Web",
+    "description": "AuxinPath is a modern, HIPAA-compliant ABA clinic management platform. Features include smart scheduling with conflict detection, clinical documentation (session notes, treatment plans, BIPs), data collection with real-time graphing (DTT, task analysis, ABC, frequency, duration), a 20-section integrated assessment wizard with VB-MAPP and FBA, client journey pipeline with Kanban board, therapist matching algorithm, caregiver portal, and Medicaid authorization support.",
+    "featureList": [
+      "Smart scheduling with conflict detection and therapist availability",
+      "Clinical documentation with session notes, treatment plans, and BIPs",
+      "Data collection and real-time graphing (DTT, task analysis, ABC, frequency, duration)",
+      "20-section integrated assessment wizard with VB-MAPP and FBA",
+      "Client journey pipeline with Kanban board and automatic stage progression",
+      "HIPAA-compliant audit trail and role-based access control",
+      "Caregiver portal with schedules, progress reports, and messaging",
+      "Intelligent therapist matching based on language, availability, caseload, and location",
+      "Medicaid authorization and billing support",
+      "PDF generation for clinical reports"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "BCBA, BCaBA, RBT, ABA clinic owners, ABA practice managers"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/PreOrder",
+      "description": "Join the waitlist for early beta access"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is AuxinPath?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AuxinPath is an all-in-one ABA (Applied Behavior Analysis) clinic management platform designed for BCBA and RBT teams. It combines smart scheduling, clinical documentation, data collection with real-time graphing, a caregiver portal, and HIPAA-compliant security in one modern web application."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is AuxinPath designed for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AuxinPath is built specifically for ABA therapy clinics and professionals, including BCBAs (Board Certified Behavior Analysts), BCaBAs, RBTs (Registered Behavior Technicians), clinic owners, practice managers, and caregivers of clients receiving ABA therapy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is AuxinPath HIPAA compliant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. AuxinPath is built with HIPAA compliance as a core requirement. It includes full audit trails for all PHI access, role-based access control (RBAC) with 76 permissions, multi-tenant data isolation, encrypted data storage, and compliance dashboards for BACB and Medicaid standards."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What features does AuxinPath include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AuxinPath includes: smart scheduling with conflict detection, clinical documentation (session notes, treatment plans, BIPs), data collection methods (DTT, task analysis, ABC, frequency, duration, interval recording) with real-time progress charts, a 20-section integrated assessment wizard with VB-MAPP and FBA, client journey pipeline with Kanban board, intelligent therapist matching, a caregiver portal for parents, Medicaid authorization and billing support, and PDF report generation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is AuxinPath different from other ABA software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AuxinPath is a modern, cloud-based platform built with current technology (Next.js, React). Unlike legacy ABA software, it offers a unified client journey pipeline from lead to active client, an intelligent therapist matching algorithm that scores language compatibility, availability, caseload, and location, and a comprehensive 20-section assessment wizard that generates Medicaid-ready PDF reports. It is designed to be intuitive for both clinical staff and caregivers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When will AuxinPath be available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AuxinPath is currently in development and accepting waitlist signups for early beta access. Join the waitlist at auxinpath.com to be among the first to try it and help shape the platform with your feedback."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Skip to content (a11y) -->
+  <a href="#main" class="skip-to-content">Skip to content</a>
+
+  <!-- Sticky Navigation (appears on scroll) -->
+  <nav class="sticky-nav" id="sticky-nav" aria-label="Main navigation">
+    <div class="sticky-nav-inner">
+      <a href="#hero" class="sticky-nav-logo" aria-label="AuxinPath - Back to top">
+        <img src="assets/logo-icon.svg" alt="" width="32" height="32">
+        <span class="sticky-nav-brand">AuxinPath</span>
+      </a>
+      <div class="sticky-nav-links">
+        <a href="#features" class="sticky-nav-link" data-section="features">Features</a>
+        <a href="#faq" class="sticky-nav-link" data-section="faq">FAQ</a>
+        <a href="#waitlist" class="sticky-nav-cta">Join the Waitlist</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Animated Background -->
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+
+  <!-- Floating Decorative Elements — approved puzzle pieces -->
+  <div class="floating-elements" aria-hidden="true">
+
+    <!-- 1 · piece_14 (2-tab square) — top-left, large -->
+    <div class="floating-shape shape-1">
+      <img src="assets/puzzle_piece_14.svg" alt="" loading="lazy" />
+    </div>
+
+    <!-- 2 · piece_20 (3-tab tall) — top-right -->
+    <div class="floating-shape shape-2">
+      <img src="assets/puzzle_piece_20.svg" alt="" loading="lazy" />
+    </div>
+
+    <!-- 3 · piece_21 (4-tab+2blank tall) — mid-left -->
+    <div class="floating-shape shape-3">
+      <img src="assets/puzzle_piece_21.svg" alt="" loading="lazy" />
+    </div>
+
+    <!-- 4 · piece_24 (4-tab wide) — bottom-right -->
+    <div class="floating-shape shape-4">
+      <img src="assets/puzzle_piece_24.svg" alt="" loading="lazy" />
+    </div>
+
+    <!-- 5 · piece_14 rotated 90° — center -->
+    <div class="floating-shape shape-5">
+      <img src="assets/puzzle_piece_14.svg" alt="" loading="lazy" style="transform: rotate(90deg);" />
+    </div>
+
+    <!-- 6 · piece_24 rotated 180° — mid-right -->
+    <div class="floating-shape shape-6">
+      <img src="assets/puzzle_piece_24.svg" alt="" loading="lazy" style="transform: rotate(180deg);" />
+    </div>
+
+    <!-- 7 · piece_20 rotated 270° — bottom-left -->
+    <div class="floating-shape shape-7">
+      <img src="assets/puzzle_piece_20.svg" alt="" loading="lazy" style="transform: rotate(270deg);" />
+    </div>
+
+    <!-- 8 · piece_21 rotated 45° — upper-mid -->
+    <div class="floating-shape shape-8">
+      <img src="assets/puzzle_piece_21.svg" alt="" loading="lazy" style="transform: rotate(45deg);" />
+    </div>
+
+    <!-- 9 · piece_14 rotated 180° — lower-right area -->
+    <div class="floating-shape shape-9">
+      <img src="assets/puzzle_piece_14.svg" alt="" loading="lazy" style="transform: rotate(180deg);" />
+    </div>
+
+    <!-- 10 · piece_24 rotated 90° — top-center accent -->
+    <div class="floating-shape shape-10">
+      <img src="assets/puzzle_piece_24.svg" alt="" loading="lazy" style="transform: rotate(90deg);" />
+    </div>
+
+  </div>
+
+
+  <!-- Main Content -->
+  <main class="main-content" id="main">
+    <h1 class="sr-only">AuxinPath &mdash; ABA Clinic Management Software for BCBA and RBT Teams</h1>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <!-- Logo (full AuxinPath illustration + wordmark) -->
+        <div class="logo-container" id="logo">
+          <img src="assets/logo.svg" alt="AuxinPath - ABA Clinic Management Platform" class="logo-image">
+        </div>
+
+        <!-- Coming Soon Heading -->
+        <div class="coming-soon-container" id="coming-soon">
+          <h2 class="coming-soon-text" aria-label="Coming Soon">
+            <span class="word" style="--i: 0">Coming</span>
+            <span class="word" style="--i: 1">Soon</span>
+          </h2>
+        </div>
+
+        <!-- Subtitle -->
+        <p class="subtitle" id="subtitle">
+          The smarter way to manage your ABA clinic
+        </p>
+
+        <p class="description" id="description">
+          Scheduling, clinical documentation, data collection, treatment plans, and parent engagement &mdash; all in one
+          modern platform built for BCBA and RBT teams.
+        </p>
+
+        <!-- Hero CTA — scroll to waitlist form -->
+        <a href="#waitlist" class="hero-cta" id="hero-cta">
+          <span class="hero-cta-text">Join the Waitlist</span>
+          <svg class="hero-cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14M19 12l-7 7-7-7"/>
+          </svg>
+        </a>
+
+        <!-- Countdown (commented out - activate when launch date is set) -->
+        <!--
+        <div class="countdown" id="countdown">
+          <div class="countdown-item">
+            <span class="countdown-value" id="days">00</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="hours">00</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="minutes">00</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="seconds">00</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+      <h2 class="features-heading scroll-reveal">Everything your clinic needs</h2>
+      <div class="features-grid">
+
+        <div class="feature-card scroll-reveal" style="--stagger: 0">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+              <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Smart Scheduling</h3>
+          <p class="feature-desc">Conflict detection, therapist availability, and automated appointment management in
+            one calendar.</p>
+        </div>
+
+        <div class="feature-card scroll-reveal" style="--stagger: 1">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Clinical Documentation</h3>
+          <p class="feature-desc">Session notes, treatment plans, and BIPs with guided templates and approval workflows.
+          </p>
+        </div>
+
+        <div class="feature-card scroll-reveal" style="--stagger: 2">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Data Collection &amp; Graphing</h3>
+          <p class="feature-desc">DTT, task analysis, ABC, frequency, and duration recording with real-time progress
+            charts.</p>
+        </div>
+
+        <div class="feature-card scroll-reveal" style="--stagger: 3">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Client Journey Pipeline</h3>
+          <p class="feature-desc">Track every client from lead to intake to active &mdash; Kanban board with automatic
+            stage progression.</p>
+        </div>
+
+        <div class="feature-card scroll-reveal" style="--stagger: 4">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M9 12l2 2 4-4" />
+              <path d="M12 2a10 10 0 1 0 10 10" />
+              <path d="M12 2v4" />
+              <path d="M22 12h-4" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Assessment Wizard</h3>
+          <p class="feature-desc">20-section integrated assessment with VB-MAPP, FBA analysis, and PDF generation for
+            Medicaid authorization.</p>
+        </div>
+
+        <div class="feature-card scroll-reveal" style="--stagger: 5">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              <circle cx="12" cy="16" r="1" />
+            </svg>
+          </div>
+          <h3 class="feature-title">HIPAA Compliant</h3>
+          <p class="feature-desc">Full audit trail, role-based access, and compliance dashboards for BACB and Medicaid
+            standards.</p>
+        </div>
+
+        <div class="feature-card scroll-reveal" style="--stagger: 6">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Caregiver Portal</h3>
+          <p class="feature-desc">Secure parent access to schedules, progress reports, shared documents, and direct
+            messaging.</p>
+        </div>
+
+        <div class="feature-card scroll-reveal" style="--stagger: 7">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Therapist Matching</h3>
+          <p class="feature-desc">Intelligent team assignment based on language, availability, caseload, and location to
+            find the best therapist-client fit.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Section — visible content for SEO and AI search -->
+    <section class="faq-section" id="faq">
+      <h2 class="faq-heading scroll-reveal">Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <details class="faq-item scroll-reveal" open>
+          <summary class="faq-question">What is AuxinPath?</summary>
+          <p class="faq-answer">AuxinPath is an all-in-one ABA (Applied Behavior Analysis) clinic management platform
+            designed for BCBA and RBT teams. It combines smart scheduling, clinical documentation, data collection with
+            real-time graphing, a caregiver portal, and HIPAA-compliant security in one modern web application.</p>
+        </details>
+        <details class="faq-item scroll-reveal">
+          <summary class="faq-question">Who is AuxinPath designed for?</summary>
+          <p class="faq-answer">AuxinPath is built for ABA therapy clinics and professionals &mdash; including BCBAs,
+            BCaBAs, RBTs, clinic owners, practice managers, and caregivers of clients receiving ABA services.</p>
+        </details>
+        <details class="faq-item scroll-reveal">
+          <summary class="faq-question">Is AuxinPath HIPAA compliant?</summary>
+          <p class="faq-answer">Yes. AuxinPath is built with HIPAA compliance as a core requirement. It includes full
+            audit trails for all PHI access, role-based access control with 76 granular permissions, multi-tenant data
+            isolation, encrypted storage, and compliance dashboards for BACB and Medicaid standards.</p>
+        </details>
+        <details class="faq-item scroll-reveal">
+          <summary class="faq-question">What data collection methods are supported?</summary>
+          <p class="faq-answer">AuxinPath supports discrete trial training (DTT), task analysis, ABC (antecedent-behavior-consequence)
+            recording, frequency counting, duration tracking, and interval recording &mdash; all with real-time progress
+            charts and graphing.</p>
+        </details>
+        <details class="faq-item scroll-reveal">
+          <summary class="faq-question">Does AuxinPath support assessments and treatment plans?</summary>
+          <p class="faq-answer">Yes. AuxinPath includes a comprehensive 20-section integrated assessment wizard with
+            VB-MAPP and FBA analysis, plus automatic PDF generation for Medicaid authorization requests. Assessment
+            findings flow directly into treatment plans and behavior intervention plans.</p>
+        </details>
+        <details class="faq-item scroll-reveal">
+          <summary class="faq-question">When will AuxinPath be available?</summary>
+          <p class="faq-answer">AuxinPath is currently in development and accepting waitlist signups for early beta
+            access. Join the waitlist below to be among the first to try it and help shape the platform.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA / Waitlist Section -->
+    <section class="waitlist-section" id="waitlist">
+      <div class="waitlist-content">
+        <!-- Decorative accent -->
+        <div class="waitlist-accent" aria-hidden="true">
+          <img src="assets/puzzle_piece_21.svg" alt="" loading="lazy" />
+        </div>
+
+        <span class="waitlist-badge">Limited Beta Access</span>
+        <h2 class="waitlist-heading">Be among the first</h2>
+        <p class="waitlist-text">
+          Join our beta program and help shape the future of ABA clinic management.
+        </p>
+
+        <form id="waitlist-form" class="waitlist-form"
+          action="https://script.google.com/macros/s/AKfycbwU1rtnyaYPwYXhKBJ5OoyQLIOIFqbVHzAZIJ7Kh8Ji3nk9MTpdowfJjPg6fyoKIhzZTg/exec"
+          method="POST">
+          <div class="form-fields">
+            <div class="form-group">
+              <input type="text" name="agency" id="agency-input" class="form-input" placeholder=" " required
+                autocomplete="organization">
+              <label for="agency-input" class="form-label">Agency name</label>
+              <div class="form-highlight"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" name="contact_name" id="contact-input" class="form-input" placeholder=" " required
+                autocomplete="name">
+              <label for="contact-input" class="form-label">Contact name</label>
+              <div class="form-highlight"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" id="email-input" class="form-input" placeholder=" " required
+                autocomplete="email">
+              <label for="email-input" class="form-label">Email address</label>
+              <div class="form-highlight"></div>
+            </div>
+
+            <button type="submit" class="cta-button" id="cta-button">
+              <span class="btn-text">Join the Waitlist</span>
+              <span class="btn-loader" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-dasharray="40 60" />
+                </svg>
+              </span>
+              <span class="btn-ripple"></span>
+            </button>
+          </div>
+
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_subject" value="New AuxinPath Waitlist Signup">
+        </form>
+
+        <p class="waitlist-privacy">Your information is secure. No spam, ever.</p>
+        <p class="waitlist-social-proof">Join clinics already on the waitlist.</p>
+
+        <!-- Inline error message (replaces alert) -->
+        <p class="form-error" id="form-error" role="alert" aria-live="assertive"></p>
+
+        <!-- Success Message -->
+        <div class="success-message" id="success-message" role="alert" aria-live="polite">
+          <div class="success-icon">
+            <svg viewBox="0 0 52 52" width="52" height="52">
+              <circle class="success-circle" cx="26" cy="26" r="24" fill="none" stroke="currentColor"
+                stroke-width="2" />
+              <path class="success-check" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" d="M14 27l7 7 16-16" />
+            </svg>
+          </div>
+          <p class="success-text">You're on the list! 🎉</p>
+          <p class="success-subtext">We'll be in touch soon with early access details.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#features" class="footer-link">Features</a>
+        <a href="#faq" class="footer-link">FAQ</a>
+        <a href="#waitlist" class="footer-link">Waitlist</a>
+        <a href="mailto:hello@auxinpath.com" class="footer-link">Contact</a>
+      </nav>
+      <p class="footer-copyright">&copy; 2026 AuxinPath. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
