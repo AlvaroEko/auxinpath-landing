@@ -1,0 +1,21 @@
+{
+  "name": "AuxinPath - ABA Clinic Management",
+  "short_name": "AuxinPath",
+  "description": "ABA Clinic Management Software for BCBA & RBT Teams",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8FBF4",
+  "theme_color": "#0D7377",
+  "icons": [
+    {
+      "src": "/assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

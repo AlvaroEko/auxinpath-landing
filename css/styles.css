@@ -1127,6 +1127,85 @@ body {
   display: none;
 }
 
+/* --- How it Works Section --- */
+.how-section {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-lg) var(--space-xl);
+}
+
+.how-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-xl);
+}
+
+.how-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.how-step {
+  flex: 1;
+  text-align: center;
+  padding: var(--space-md);
+  max-width: 260px;
+  transition-delay: calc(var(--stagger, 0) * 120ms);
+}
+
+.how-step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-teal), var(--color-teal-dark));
+  color: var(--color-white);
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-sm);
+  box-shadow: 0 4px 16px rgba(13, 115, 119, 0.25);
+}
+
+.how-step-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--color-teal);
+  margin: 0 auto var(--space-xs);
+}
+
+.how-step-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.how-step-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.how-step-connector {
+  display: flex;
+  align-items: center;
+  color: var(--color-teal);
+  opacity: 0.3;
+  transform: rotate(90deg);
+}
+
+.how-step-connector svg {
+  width: 24px;
+  height: 24px;
+}
+
 /* --- FAQ Section --- */
 .faq-section {
   width: 100%;
@@ -1459,6 +1538,17 @@ body {
 
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .how-steps {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .how-step-connector {
+    padding-top: 36px;
+    transform: none;
   }
 }
 
